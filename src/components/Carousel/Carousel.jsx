@@ -49,7 +49,7 @@ const Carousel = ({slides}) => {
     
   
     return (
-      <div className='h-[800px] w-{100vw} relative group'>
+      <div className='lg:h-[800px] md:h-[600px] h-[400px] w-{100vw} relative group'>
         <div
           className='w-full h-full bg-cover bg-center duration-500'
           style={{ backgroundImage: `url(${slides[currentIndex].productImage})` }}
