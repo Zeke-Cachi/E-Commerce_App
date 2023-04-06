@@ -90,12 +90,9 @@ const Footer = () => {
         <Logo>Digital World</Logo>
 
         <Desc>
-          We offer our customers a personalized attention, providing the
-          necessary advice, so that they can necessary advice, so that they can
-          make their purchases in the most comfortable way and the most
-          comfortable way and satisfy their needs.As a chain of stores
-          specializing in the sale of technology, we have focused on providing
-          excellent customer service and competitive pricing.
+          we offer our customers a personalized attention, providing the
+          necessary advice, in order to make their purchases in the most
+          comfortable way and to satisfy their needs.
         </Desc>
 
         <SocialContainer>
