@@ -6,6 +6,7 @@ import product2 from "./assets/img/dos.jpg";
 import product3 from "./assets/img/tres.jpg";
 import product4 from "./assets/img/cuatro.jpg";
 import product5 from "./assets/img/cinco.jpg";
+import Navbar from "./components/Carousel/Navbar";
 
 
 
@@ -19,9 +20,11 @@ const slides = [
 
 function App() {
   return (
-
+  <>
+    <Navbar />
     <Carousel slides={slides} />
-
+    
+  </>
   )
 }
 
