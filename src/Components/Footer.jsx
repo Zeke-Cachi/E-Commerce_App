@@ -92,7 +92,7 @@ const Footer = () => {
         <Desc>
           we offer our customers a personalized attention, providing the
           necessary advice, in order to make their purchases in the most
-          comfortable way and to satisfy their needs.
+          comfortable way and to satisfy their needs.  
         </Desc>
 
         <SocialContainer>
