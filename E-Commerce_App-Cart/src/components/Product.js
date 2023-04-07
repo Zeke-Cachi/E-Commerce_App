@@ -1,4 +1,4 @@
-
+import React from "react";
 
 const Product = (props) => {
     const {data, addToCart} = props;

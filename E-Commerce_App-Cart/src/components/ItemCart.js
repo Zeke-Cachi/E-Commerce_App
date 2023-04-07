@@ -1,3 +1,4 @@
+import React from "react";
 
 const ItemCart = (props) => {
     const {data, deleteFromCart} = props;

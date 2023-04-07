@@ -3,6 +3,8 @@ import { useReducer } from "react";
 import { cartInitialState, cartReducer } from "./cartReducer";
 import ItemCart from "./ItemCart";
 import Product from "./Product";
+import React from "react";
+
 
 
 const Cart = () => {

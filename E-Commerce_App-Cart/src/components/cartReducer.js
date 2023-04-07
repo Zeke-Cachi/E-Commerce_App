@@ -1,4 +1,5 @@
 import {TYPES} from "./actions";
+import React from "react";
 
 
 export const cartInitialState = {
@@ -15,6 +16,7 @@ export const cartInitialState = {
     ],
     cart: [],
 };
+
 
 export function cartReducer(state, action) {
     switch (action.type) {
