@@ -1,12 +1,23 @@
-import Cart from "./components/Cart";
-import React from "react";
+import React, { useState } from 'react';
+import { FaShoppingCart } from 'react-icons/fa';
+import Cart from './components/Cart';
+import { FaTimes } from 'react-icons/fa';
 
-function App () {
+function App() {
+  const [cartVisibility, setCartVisibility] = useState(false);
+
+  function toggleCart() {
+    setCartVisibility(!cartVisibility);
+  }
+
   return (
     <div>
-      <Cart />
+      <div onClick={toggleCart}>
+        {cartVisibility ? <FaTimes /> : <FaShoppingCart />}
+      </div>
+      {cartVisibility && <Cart />}
     </div>
-  )
+  );
 }
 
 export default App;
