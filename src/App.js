@@ -1,12 +1,12 @@
-import React from "react";
-import Carousel from "./components/Carousel/Carousel";
-
 import product1 from "./assets/img/uno.jpg";
 import product2 from "./assets/img/dos.jpg";
 import product3 from "./assets/img/tres.jpg";
 import product4 from "./assets/img/cuatro.jpg";
 import product5 from "./assets/img/cinco.jpg";
 
+import CartIcon from "./components/Cart/CartIcon";
+import React from "react";
+import Carousel from "./components/Carousel/Carousel";
 
 
 const slides = [
@@ -19,8 +19,10 @@ const slides = [
 
 function App() {
   return (
-
-    <Carousel slides={slides} />
+    <>
+      <CartIcon />
+      <Carousel slides={slides} />
+    </>
 
   )
 }
