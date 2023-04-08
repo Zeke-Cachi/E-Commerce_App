@@ -5,9 +5,9 @@ import product4 from "./assets/img/cuatro.jpg";
 import product5 from "./assets/img/cinco.jpg";
 
 import CartIcon from "./components/Cart/CartIcon";
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "./components/Carousel/Carousel";
-
+import { FaTimes, FaShoppingCart } from "react-icons/fa"
 
 const slides = [
   {id: 1, productImage: product1},
@@ -18,13 +18,25 @@ const slides = [
 ];
 
 function App() {
+  const [showCart, setShowCart] = useState(false);
+
+  const handleCartToggle = () => {
+    setShowCart(!showCart);
+  }
+
   return (
     <>
-      <CartIcon />
+      {showCart ? (
+        <>
+          <FaTimes onClick={handleCartToggle} />
+          <CartIcon />
+        </>
+      ) : (
+        <FaShoppingCart onClick={handleCartToggle} />
+      )}
       <Carousel slides={slides} />
     </>
-
-  )
+  );
 }
 
 export default App;
