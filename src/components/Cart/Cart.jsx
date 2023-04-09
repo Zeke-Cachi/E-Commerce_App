@@ -32,7 +32,7 @@ const Cart = ({showCart}) => {
     return (
         
         <div id="cart" className="relative w-full">
-            <div className={`absolute w-full opacity-${showCart ? "100" : "0"} transition-opacity duration-500 min-h-300p bg-gray-800 w-1/3 mx-auto absolute top-20 left-1/2 transform -translate-x-1/2 z-50 rounded-md w-5/6`}>
+            <div className={`absolute w-10/12 opacity-${showCart ? "100" : "0"} transition-opacity duration-500 min-h-300p bg-gray-800 w-1/3 mx-auto absolute top-20 left-1/2 transform -translate-x-1/2 z-50 rounded-md w-5/6`}>
                 
                 <h1 className="text-4xl text-center py-1 font-Roboto text-white">Productos</h1> 
                 
