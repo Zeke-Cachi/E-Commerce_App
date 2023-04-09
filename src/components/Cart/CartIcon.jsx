@@ -1,10 +1,11 @@
 import Cart from "./Cart"
 import React from "react"
+import 'tailwindcss/tailwind.css';
 
 
-const CartIcon = () => {
+const CartIcon = ({showCart}) => {
   return (
-    <Cart />
+    <Cart showCart={showCart}/>
   )
 }
 

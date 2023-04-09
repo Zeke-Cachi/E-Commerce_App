@@ -8,6 +8,7 @@ import CartIcon from "./components/Cart/CartIcon";
 import React, { useState } from "react";
 import Carousel from "./components/Carousel/Carousel";
 import { FaTimes, FaShoppingCart } from "react-icons/fa"
+import 'tailwindcss/tailwind.css';
 
 const slides = [
   {id: 1, productImage: product1},
@@ -24,15 +25,18 @@ function App() {
     setShowCart(!showCart);
   }
 
+
+
+
   return (
     <>
       {showCart ? (
         <>
-          <FaTimes onClick={handleCartToggle} />
-          <CartIcon />
+          <FaTimes className="h-7 w-7 absolute top-10 right-10 z-50 text-white cursor-pointer" onClick={handleCartToggle} />
+          <CartIcon showCart={showCart}/>
         </>
       ) : (
-        <FaShoppingCart onClick={handleCartToggle} />
+        <FaShoppingCart className="h-7 w-7 absolute top-10 right-10 z-50 text-white cursor-pointer" onClick={ handleCartToggle} />
       )}
       <Carousel slides={slides} />
     </>

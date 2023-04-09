@@ -3,7 +3,7 @@ import {TYPES} from "./Actions";
 
 export const cartInitialState = {
     products: [
-        {id: 1, name: "Product-A", price: 500},
+        {id: 1, name: "Product-A", price: 500,},
         {id: 2, name: "Product-B", price: 600},
         {id: 3, name: "Product-C", price: 700},
         {id: 4, name: "Product-D", price: 800},
@@ -34,7 +34,7 @@ export function cartReducer(state, action) {
             };
         };
 
-        case TYPES.REMOVE_ITEM: {}
+        case TYPES.REMOVE_ITEM:
         let itemToRemove = state.cart.find((item) => item.id === action.payload)
         return itemToRemove.quantity > 1 
         ? {
@@ -50,7 +50,6 @@ export function cartReducer(state, action) {
         };
 
         case TYPES.REMOVE_ALL_ITEMS: {
-            let itemToRemove = state.cart.find((item) => item.id === action.payload);
 
             return {
                     ...state,
