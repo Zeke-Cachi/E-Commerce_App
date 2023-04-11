@@ -36,7 +36,7 @@ function App() {
           <CartIcon showCart={showCart}/>
         </>
       ) : (
-        <FaShoppingCart className="h-7 w-7 absolute top-10 right-10 z-50 text-white cursor-pointer" onClick={ handleCartToggle} />
+        <FaShoppingCart className="h-7 w-7 absolute top-10 right-10 z-50 text-white cursor-pointer" onClick={handleCartToggle} />
       )}
       <Carousel slides={slides} />
     </>
