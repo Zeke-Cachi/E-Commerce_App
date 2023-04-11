@@ -1,13 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import BurguerButton from './BurguerButton'
 
+
 const Navbar = () => {
+// funcion para cuando se clickea el botón se cambie el estado
+  const [clicked, setClicked] = useState(false)
+
+  const click = () => {
+    // cuando está false lo pasa a true y cuando está true a false
+    setClicked(!clicked)
+  }
   return (
     <>
     <NavContainer>
         <h2>Navbar <span>Responsive</span></h2>
-        <div className='linksNav active'>
+        {/* cuando clicked es true se setea la clase active y cuando no lo sea, no se setea nada */}
+        <div className={`linksNav ${clicked ? 'active' : ''}`}>
           <a href="">Home</a>
           <a href="">Shop</a>
           <a href="">About</a>
@@ -15,7 +24,7 @@ const Navbar = () => {
           <a href="">Blog</a>
         </div>
         <div className='burguerMenu'>
-        <BurguerButton />
+        <BurguerButton clicked={clicked} click={click} />
         </div>
     </NavContainer>
     </>

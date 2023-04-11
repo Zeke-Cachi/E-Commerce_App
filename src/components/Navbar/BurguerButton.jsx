@@ -1,22 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const BurguerButton = () => {
+const BurguerButton = (props) => {
   return (
+    // Menú hamburguesa
     <Burguer>
-      <div className="icon nav-icon-5">
-       <span></span>
-       <span></span>
-       <span></span>
+        {/* click es la funcion que se llama y ejecuta, que setea el estado de clicked a true o false
+        clicked es la variable del useState  */}
+      <div onClick={props.click} 
+        className={
+            `icon nav-icon-5 ${props.clicked ? 'open': ''}`
+        }
+        >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-   </Burguer>
+    </Burguer>
   )
 }
 
 export default BurguerButton
 
 const Burguer = styled.div`
-/* nav-icon-5 */
+/* nav-icon-5 para el menú hamburguesa */
 .nav-icon-5{
   width: 35px;
   height: 30px;
