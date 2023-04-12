@@ -23,6 +23,7 @@ const Navbar = () => {
           <a href="">Contact</a>
           <a href="">Blog</a>
         </div>
+        <BackDiv className={`initial ${clicked ? 'active' : ''}`}></BackDiv>
         <div className='burguerMenu'>
         <BurguerButton clicked={clicked} click={click} />
         </div>
@@ -36,7 +37,7 @@ export default Navbar
 const NavContainer = styled.nav`
 h2{
   color: white;
-    font-weight: 400;
+    font-weight: 400px;
     span{
         font-weight: bold;
     }
@@ -54,12 +55,14 @@ a{
 .linksNav{
   position: absolute;
   top: -700px;
-  left: -2000;
+  left: -2000px;
+  right: 0;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  transition: all .5s ease ;
   a{
-    color: black;
+    color: white;
     font-size: 2rem;
     display: block;
   }
@@ -83,6 +86,11 @@ a{
   left: 0;
   right: 0;
   text-align: center;
+  a{
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: white;
+  }
 }
 
 .burguerMenu{
@@ -90,4 +98,24 @@ a{
     display: none;
   }
 }
+`
+const BackDiv = styled.div`
+background-color: #00071a;
+position: absolute;
+top: -700px;
+left: -1000px;
+width: 100%;
+height: 100%;
+z-index: -1;
+transition: all .6s ease ;
+
+/* & (ampersand) caracteristica de styled components */
+&.active{
+border-radius: 0 0 80% 0;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
 `
