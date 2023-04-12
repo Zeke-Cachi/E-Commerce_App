@@ -1,42 +1,16 @@
-import { TYPES } from "./Actions"
-import { useReducer } from "react";
-import { cartInitialState, cartReducer } from "./CartReducer";
 import ItemCart from "./ItemCart";
-import Products from "./Products";
-import React from "react";
 import 'tailwindcss/tailwind.css';
 
 
 
-const Cart = ({showCart}) => {
-    const [state, dispatch] = useReducer(cartReducer, cartInitialState);
-
-    const {products, cart,} = state;
-
-    const addToCart = (id) => {
-        dispatch({ type: TYPES.ADD_TO_CART, payload: id });
-    };
-
-// deleteAllItems es un booleano - para boton quitar uno es false.
-// para quitar todos es true. - VER componente ItemCart
-    const deleteFromCart = (id, deleteAllItems) => {
-        deleteAllItems ? dispatch({type: TYPES.REMOVE_ALL_ITEMS, payload: id}) : dispatch({type: TYPES.REMOVE_ITEM, payload: id})
-    };
-
-    const clearCart = () => {
-        dispatch({ type: TYPES.CLEAR_CART });
-    };
-
-
+const Cart = ({cart, deleteFromCart, clearCart}) => {
 
     return (
         
         <div id="cart" className={`relative w-full opacity-100 transition-opacity duration-500`}>
-            <div className="absolute w-10/12 min-h-300p bg-gray-800 w-1/3 mx-auto absolute top-20 left-1/2 transform -translate-x-1/2 z-50 rounded-md w-5/6">
+            <div className="absolute w-10/12 min-h-300p w-1/3 bg-gray-800 mx-auto absolute top-20 left-1/2 transform -translate-x-1/2 z-50 rounded-md w-5/6">
                 
                 <h1 className="text-4xl text-center py-1 font-Roboto text-white">Productos</h1> 
-                
-                <div>{products.map((product) => {return <Products key={product.id} data={product} addToCart={addToCart} />})}</div>
                 
                 <h2 className="text-center font-Roboto text-3xl text-white mt-4">Carrito</h2>
                 

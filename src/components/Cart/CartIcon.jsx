@@ -3,9 +3,9 @@ import React from "react"
 import 'tailwindcss/tailwind.css';
 
 
-const CartIcon = ({showCart}) => {
+const CartIcon = ({cart, deleteFromCart, clearCart}) => {
   return (
-    <Cart showCart={showCart}/>
+    <Cart cart={cart} deleteFromCart={deleteFromCart} clearCart={clearCart}/>
   )
 }
 
