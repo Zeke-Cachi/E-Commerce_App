@@ -25,6 +25,7 @@ export default BurguerButton
 const Burguer = styled.div`
 /* nav-icon-5 para el menú hamburguesa */
 .nav-icon-5{
+    z-index: 1000;
   width: 35px;
   height: 30px;
   margin: 10px 10px;

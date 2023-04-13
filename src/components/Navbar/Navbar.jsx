@@ -36,6 +36,7 @@ export default Navbar
 
 const NavContainer = styled.nav`
 h2{
+  z-index: 1000;
   color: white;
     font-weight: 400px;
     span{
@@ -86,6 +87,7 @@ a{
   left: 0;
   right: 0;
   text-align: center;
+  z-index: 1000;
   a{
     font-size: 2rem;
     margin-top: 1rem;
@@ -102,11 +104,11 @@ a{
 const BackDiv = styled.div`
 background-color: #00071a;
 position: absolute;
-top: -700px;
+top: -1000px;
 left: -1000px;
 width: 100%;
 height: 100%;
-z-index: -1;
+z-index: 1;
 transition: all .6s ease ;
 
 /* & (ampersand) caracteristica de styled components */
